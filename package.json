@@ -70,7 +70,7 @@
     "source-map-loader": "^0.2.3",
     "standard": "^11.0.1",
     "wdio-mocha-framework": "^0.5.13",
-    "wdio-sauce-service": "^0.4.10",
+    "wdio-sauce-service": "^0.4.13",
     "wdio-selenium-standalone-service": "^0.0.10",
     "wdio-spec-reporter": "^0.1.5",
     "wdio-static-server-service": "^1.0.1",
