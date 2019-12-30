@@ -1,5 +1,9 @@
-# Accessible autocomplete
+# Accessible autocomplete [modified]
 
+## About this fork
+Unlike the master copy, this fork allows normal form submit events _unless_ a suggestion has been chosen. **If and only if** a suggestion has been chosen, does the submit event get intercepted and handled by the plugin.
+
+## General
 [![npm version](https://img.shields.io/npm/v/accessible-autocomplete.svg)](http://npm.im/accessible-autocomplete)
 [![Build Status](https://travis-ci.com/alphagov/accessible-autocomplete.svg?branch=master)](https://travis-ci.com/alphagov/accessible-autocomplete)
 [![Coverage Status](https://coveralls.io/repos/github/alphagov/accessible-autocomplete/badge.svg?branch=master)](https://coveralls.io/github/alphagov/accessible-autocomplete?branch=master)
