@@ -355,12 +355,10 @@ export default class Autocomplete extends Component {
   }
 
   handleEnter (event) {
-    if (this.state.menuOpen) {
+    const hasSelectedOption = this.state.selected >= 0
+    if (this.state.menuOpen && hasSelectedOption) {
       event.preventDefault()
-      const hasSelectedOption = this.state.selected >= 0
-      if (hasSelectedOption) {
-        this.handleOptionClick(event, this.state.selected)
-      }
+      this.handleOptionClick(event, this.state.selected)
     }
   }
 
