@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Fixes
+
+- [Pull request #407: Use a div element to wrap enhanced component.](https://github.com/alphagov/accessible-autocomplete/pull/407)
 - [Pull request #388: Set aria-selected as a string instead of a boolean to avoid being dropped.](https://github.com/alphagov/accessible-autocomplete/pull/388)
 
 ## 2.0.1 - 2019-10-07
