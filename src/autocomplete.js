@@ -50,7 +50,8 @@ export default class Autocomplete extends Component {
     required: false,
     tNoResults: () => 'No results found',
     tAssistiveHint: () => 'When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.',
-    dropdownArrow: DropdownArrowDown
+    dropdownArrow: DropdownArrowDown,
+    experimentalAllowAnyInput: false
   }
 
   elementReferences = {}
@@ -354,8 +355,15 @@ export default class Autocomplete extends Component {
 
   handleEnter (event) {
     if (this.state.menuOpen) {
-      event.preventDefault()
+      // If not using autoselect and not using enhanceSelectElement, check if the current
+      // value can be submitted without selecting an option from the open menu.
+      const allowAnyInput = !this.props.autoselect && !this.props.selectElement && this.props.experimentalAllowAnyInput
       const hasSelectedOption = this.state.selected >= 0
+
+      if (!allowAnyInput || hasSelectedOption) {
+        event.preventDefault()
+      }
+
       if (hasSelectedOption) {
         this.handleOptionClick(event, this.state.selected)
       }

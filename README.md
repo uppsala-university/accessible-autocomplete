@@ -278,6 +278,12 @@ Type: `Function`
 
 A function that gets passed an object with the property `className` (`{ className: '' }`) and should return a string of HTML or a (P)React element. :warning: **Caution:** because this function allows you to output arbitrary HTML, you should [make sure it's trusted](https://en.wikipedia.org/wiki/Cross-site_scripting), and accessible.
 
+#### `experimentalAllowAnyInput` (default: `false`)
+
+Type: `Boolean`
+
+The autocomplete will submit the entered value even if does not match a value in the list of suggestions when pressing Enter. This option has no effect if `autoselect` is `true` or if `enhanceSelectElement` is used.
+
 ### Internationalization
 
 #### `tNoResults` (default: `() => 'No results found'`)

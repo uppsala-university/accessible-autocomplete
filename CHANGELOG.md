@@ -5,6 +5,7 @@
 ### Fixes
 
 - [Pull request #415: Make React bundle work server-side in a NodeJS environment](https://github.com/alphagov/accessible-autocomplete/pull/415)
+- Add `experimentalAllowAnyInput` option to allow submission of value not matching anything in suggestion list. Tests missing, must be added before creating pull request.
 
 ## 2.0.2 - 2020-01-30
 
